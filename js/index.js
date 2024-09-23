@@ -18,6 +18,13 @@ document
   .getElementById("noakhali-donate-now")
   .addEventListener("click", function () {
     let noakhaliInputValue = getValueById("noakhali-input-field");
+
+    if (noakhaliInputValue < 0 || isNaN(noakhaliInputValue)) {
+      alert("Invalid Donation Amount!");
+      document.getElementById("modal").close();
+      document.getElementById("noakhali-input-field").value = "";
+      return;
+    }
     let noakhaliTotalDonateElement = document.getElementById(
       "noakhali-total-donate"
     );
@@ -37,11 +44,11 @@ document
     let historyItem = document.createElement("div");
     historyItem.classList.add("border", "p-8", "rounded-2xl", "mb-6");
     historyItem.innerHTML = `
-    <p class="font-bold text-xl">
-        ${noakhaliInputValue} Taka is Donated for flood at Noakhali, Bangladesh
-    </p>
-    <p class= " text-gray-700 text-sm font-light mt-3">Date: ${new Date().toLocaleString()} GMT +0600 (Bangladesh Standard Time) </p>
-    `;
+      <p class="font-bold text-xl">
+          ${noakhaliInputValue} Taka is Donated for flood at Noakhali, Bangladesh
+      </p>
+      <p class= " text-gray-700 text-sm font-light mt-3">Date: ${new Date().toLocaleString()} GMT +0600 (Bangladesh Standard Time) </p>
+      `;
     quotaElement.appendChild(historyItem);
 
     document.getElementById("noakhali-input-field").value = "";
@@ -52,6 +59,14 @@ document
   .getElementById("feni-donate-now")
   .addEventListener("click", function () {
     let feniInputValue = getValueById("feni-input-field");
+
+    if (feniInputValue > 0 || isNaN(feniInputValue)) {
+      alert("Invalid Donation Amount!");
+      document.getElementById("modal").close();
+      document.getElementById("feni-input-field").value = "";
+      return;
+    }
+
     let feniTotalDonateElement = document.getElementById("feni-total-donate");
     let feniTotalDonateValue = getInnerTextById("feni-total-donate");
 
@@ -84,6 +99,14 @@ document
   .getElementById("quota-donate-now")
   .addEventListener("click", function () {
     let quotaInputValue = getValueById("quota-input-field");
+
+    if (quotaInputValue > 0 || isNaN(quotaInputValue)) {
+      alert("Invalid Donation Amount!");
+      document.getElementById("modal").close();
+      document.getElementById("quota-input-field").value = "";
+      return;
+    }
+
     let quotaTotalDonateElement = document.getElementById("quota-total-donate");
     let quotaTotalDonateValue = getInnerTextById("quota-total-donate");
 
