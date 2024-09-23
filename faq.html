@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frequently Asked Question</title>
+    <!-- Daisy UI + Tailwind CDN -->
+    <!-- Google Font CDN Link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome CDN link -->
+    <script
+      src="https://kit.fontawesome.com/b7f3b95caa.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Daisy UI + Tailwind CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind CSS configaration -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#B4F461",
+              secondary: "#F9F7F3",
+              third: "#F3F3F3",
+            },
+            fontFamily: {
+              lexend: "Lexend",
+            },
+          },
+        },
+      };
+      </script>
+  </head>
+  <body>
+     <header><!-- Navbar Section Start -->
+        <section class="bg-secondary bg-opacity-60 sticky top-0 z-50 backdrop-blur-xl">
+           <div
+             class="w-11/12 mx-auto gap-4 pt-6 py-12 flex justify-between items-center"
+           >
+             <div>
+               <button
+                 onclick="window.location.href='index.html';"
+                 class="bg-primary py-3 px-8 rounded-lg font-semibold text-xl"
+               >
+                 Home
+               </button>
+             </div>
+   
+             <div class="flex items-center">
+               <img src="assets/logo.png" alt="" />
+               <a class="text-xl font-semibold ml-4">Donate Bangladesh</a>
+             </div>
+   
+             <div class="flex items-center">
+               <img src="assets/coin.png" alt="" />
+               <p class="text-xl font-medium ml-3">
+                 <span id="account-balance">5500</span> BDT
+               </p>
+             </div>
+           </div>
+         </section>
+         <!-- Navbar Section End --></header>
+
+   <main> <!-- FAQ section start -->
+    <section class="mt-28 mb-28">
+        <!-- faq top -->
+        <div class="text-center">
+          <h1 class="garamond text-4xl font-extrabold mb-4">
+            Frequently Asked Any Questions
+          </h1>
+          <p class="text-gray-500 mb-16">
+            There are many variations of passages of Lorem Ipsum available, but
+            the majority have <br class="hidden lg:block" />
+            suffered alteration in some form, by injected humour.
+          </p>
+        </div>
+        <!-- Faq accortion -->
+        <div class="flex flex-col lg:flex-row gap-8 justify-center ">
+          <!-- accordion question -->
+          <div class="space-y-8">
+            <div class="collapse collapse-plus bg-base-200">
+              <input type="radio" name="my-accordion-3" checked="checked"  />
+              <div class="collapse-title text-xl font-medium">
+                1. Are application fee waivers available?
+              </div>
+              <div class="collapse-content">
+                <p>
+                 There are many variations of passages of Lorem Ipsum
+                  <br class="hidden lg:block" />
+                  available, but the majority have suffered alteration in some
+                  <br class="hidden lg:block" />
+                  form, by injected humour.
+                </p>
+              </div>
+            </div>
+            <div class="collapse collapse-plus bg-base-200">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-medium">
+                2. Are application fee waivers available?
+              </div>
+              <div class="collapse-content">
+                <p>
+                  There are many variations of passages of Lorem Ipsum
+                  <br class="hidden lg:block" />
+                  available, but the majority have suffered alteration in some
+                  <br class="hidden lg:block" />
+                  form, by injected humour.
+                </p>
+              </div>
+            </div>
+            <div class="collapse collapse-plus bg-base-200">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-medium">
+                3. Are application fee waivers available?
+              </div>
+              <div class="collapse-content">
+                <p>
+                  There are many variations of passages of Lorem Ipsum
+                  <br class="hidden lg:block" />
+                  available, but the majority have suffered alteration in some
+                  <br class="hidden lg:block" />
+                  form, by injected humour.
+                </p>
+              </div>
+            </div>
+            <div class="collapse collapse-plus bg-base-200">
+              <input type="radio" name="my-accordion-3" />
+              <div class="collapse-title text-xl font-medium">
+                4. Are application fee waivers available?
+              </div>
+              <div class="collapse-content">
+                <p>
+                  There are many variations of passages of Lorem Ipsum
+                  <br class="hidden lg:block" />
+                  available, but the majority have suffered alteration in some
+                  <br class="hidden lg:block" />
+                  form, by injected humour.
+                </p>
+              </div>
+            </div>
+          </div>
+        </main>
+  </body>
+</html>

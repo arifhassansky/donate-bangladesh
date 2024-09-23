@@ -40,7 +40,7 @@ document
     <p class="font-bold text-xl">
         ${noakhaliInputValue} Taka is Donated for flood at Noakhali, Bangladesh
     </p>
-    <p>Date: ${new Date().toLocaleString()} </p>
+    <p class= " text-gray-700 text-sm font-light mt-3">Date: ${new Date().toLocaleString()} GMT +0600 (Bangladesh Standard Time) </p>
     `;
     quotaElement.appendChild(historyItem);
 
@@ -72,7 +72,7 @@ document
     <p class="font-bold text-xl">
         ${feniInputValue} Taka is Donated for Flood Relief in Feni, Bangladesh
     </p>
-    <p>Date: ${new Date().toLocaleString()} </p>
+    <p>Date: ${new Date().toLocaleString()} GMT +0600 (Bangladesh Standard Time) </p>
     `;
     quotaElement.appendChild(historyItem);
 
@@ -104,7 +104,7 @@ document
     <p class="font-bold text-xl">
         ${quotaInputValue} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh
     </p>
-    <p>Date: ${new Date().toLocaleString()} </p>
+    <p>Date: ${new Date().toLocaleString()} GMT +0600 (Bangladesh Standard Time) </p>
     `;
     quotaElement.appendChild(historyItem);
 
