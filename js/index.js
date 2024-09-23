@@ -4,7 +4,16 @@ function getValueById(id) {
 function getInnerTextById(id) {
   return parseFloat(document.getElementById(id).innerText);
 }
-// nokhali event
+function addHiddenClass(id) {
+  let section = document.getElementById(id);
+  section.classList.add("hidden");
+}
+function removeHiddenClass(id) {
+  let element = document.getElementById(id);
+  element.classList.remove("hidden");
+}
+
+// noakhali event
 document
   .getElementById("noakhali-donate-now")
   .addEventListener("click", function () {
@@ -29,11 +38,13 @@ document
     historyItem.classList.add("border", "p-8", "rounded-2xl", "mb-6");
     historyItem.innerHTML = `
     <p class="font-bold text-xl">
-        ${noakhaliInputValue} Taka is Donated for famine-2024 at Feni, Bangladesh
+        ${noakhaliInputValue} Taka is Donated for flood at Noakhali, Bangladesh
     </p>
     <p>Date: ${new Date().toLocaleString()} </p>
     `;
     quotaElement.appendChild(historyItem);
+
+    document.getElementById("noakhali-input-field").value = "";
   });
 
 //   feni event
@@ -53,6 +64,19 @@ document
     accountBalanceElement.innerText = (
       accountBalanceValue - feniInputValue
     ).toFixed(2);
+
+    let quotaElement = document.getElementById("history");
+    let historyItem = document.createElement("div");
+    historyItem.classList.add("border", "p-8", "rounded-2xl", "mb-6");
+    historyItem.innerHTML = `
+    <p class="font-bold text-xl">
+        ${feniInputValue} Taka is Donated for Flood Relief in Feni, Bangladesh
+    </p>
+    <p>Date: ${new Date().toLocaleString()} </p>
+    `;
+    quotaElement.appendChild(historyItem);
+
+    document.getElementById("feni-input-field").value = "";
   });
 
 //   quota event
@@ -72,4 +96,47 @@ document
     accountBalanceElement.innerText = (
       accountBalanceValue - quotaInputValue
     ).toFixed(2);
+
+    let quotaElement = document.getElementById("history");
+    let historyItem = document.createElement("div");
+    historyItem.classList.add("border", "p-8", "rounded-2xl", "mb-6");
+    historyItem.innerHTML = `
+    <p class="font-bold text-xl">
+        ${quotaInputValue} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh
+    </p>
+    <p>Date: ${new Date().toLocaleString()} </p>
+    `;
+    quotaElement.appendChild(historyItem);
+
+    document.getElementById("history-input-field").value = "";
   });
+
+// History button
+
+document.getElementById("history-btn").addEventListener("click", function () {
+  const historyBtn = document.getElementById("history-btn");
+  historyBtn.classList.add("bg-primary");
+
+  const donationBtn = document.getElementById("donation-btn");
+  donationBtn.classList.remove("bg-primary");
+
+  addHiddenClass("noakhali-section");
+  addHiddenClass("feni-section");
+  addHiddenClass("quota-section");
+
+  removeHiddenClass("history");
+});
+
+document.getElementById("donation-btn").addEventListener("click", function () {
+  const donationBtn = document.getElementById("donation-btn");
+  donationBtn.classList.add("bg-primary");
+
+  const historyBtn = document.getElementById("history-btn");
+  historyBtn.classList.remove("bg-primary");
+
+  removeHiddenClass("noakhali-section");
+  removeHiddenClass("feni-section");
+  removeHiddenClass("quota-section");
+
+  addHiddenClass("history");
+});

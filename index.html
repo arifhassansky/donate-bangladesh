@@ -81,12 +81,18 @@
         class="w-11/12 mx-auto mt-20 flex justify-center items-center gap-4 pb-6"
       >
         <div>
-          <button class="bg-primary py-4 px-8 rounded-lg font-semibold text-xl">
+          <button
+            id="donation-btn"
+            class="bg-primary py-4 px-8 rounded-lg font-semibold text-xl border"
+          >
             Donation
           </button>
         </div>
         <div>
-          <button class="py-4 px-8 rounded-lg font-semibold text-xl border">
+          <button
+            id="history-btn"
+            class="py-4 px-8 rounded-lg font-semibold text-xl border"
+          >
             History
           </button>
         </div>
@@ -98,7 +104,7 @@
     <!-- Main Section Start -->
     <main class="w-10/12 mx-auto">
       <!-- Flood Noakhali section start -->
-      <section class="border rounded-2xl p-2 lg:p-8 mt-8">
+      <section id="noakhali-section" class="border rounded-2xl p-2 lg:p-8 mt-8">
         <div class="hero">
           <div class="hero-content flex-col lg:flex-row gap-8">
             <img src="assets/noakhali.png" class="rounded-lg shadow-2xl" />
@@ -141,7 +147,7 @@
       <!-- Flood Noakhali section end -->
 
       <!-- Flood Feni Start -->
-      <section class="border rounded-2xl p-2 lg:p-8 mt-8">
+      <section id="feni-section" class="border rounded-2xl p-2 lg:p-8 mt-8">
         <div class="hero">
           <div class="hero-content flex-col lg:flex-row gap-8">
             <img src="assets/feni.png" class="rounded-lg shadow-2xl" />
@@ -154,7 +160,7 @@
               </button>
 
               <h1 class="text-xl font-bold">
-                Donate for Flood Relief in Feni,Bangladesh
+                Donate for Flood Relief in Feni, Bangladesh
               </h1>
               <p class="py-6 font-light">
                 The recent floods in Feni have devastated local communities,
@@ -186,7 +192,10 @@
       <!-- Flood Feni End -->
 
       <!-- Quota Movement Start -->
-      <section class="border rounded-2xl p-2 lg:p-8 mt-8 mb-20">
+      <section
+        id="quota-section"
+        class="border rounded-2xl p-2 lg:p-8 mt-8 mb-20"
+      >
         <div class="hero">
           <div class="hero-content flex-col lg:flex-row gap-8">
             <img src="assets/quota-protest.png" class="rounded-lg shadow-2xl" />
@@ -232,7 +241,7 @@
       <!-- Quota Movement End -->
 
       <!-- History Section Start -->
-      <section id="history"></section>
+      <section id="history" class="hidden"></section>
       <!-- History Section End -->
     </main>
     <!-- Main Section End -->
