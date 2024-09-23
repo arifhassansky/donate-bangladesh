@@ -60,7 +60,7 @@ document
   .addEventListener("click", function () {
     let feniInputValue = getValueById("feni-input-field");
 
-    if (feniInputValue > 0 || isNaN(feniInputValue)) {
+    if (feniInputValue < 0 || isNaN(feniInputValue)) {
       alert("Invalid Donation Amount!");
       document.getElementById("modal").close();
       document.getElementById("feni-input-field").value = "";
@@ -100,7 +100,7 @@ document
   .addEventListener("click", function () {
     let quotaInputValue = getValueById("quota-input-field");
 
-    if (quotaInputValue > 0 || isNaN(quotaInputValue)) {
+    if (quotaInputValue < 0 || isNaN(quotaInputValue)) {
       alert("Invalid Donation Amount!");
       document.getElementById("modal").close();
       document.getElementById("quota-input-field").value = "";
