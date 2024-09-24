@@ -152,7 +152,7 @@ document
     `;
     quotaElement.appendChild(historyItem);
 
-    document.getElementById("history-input-field").value = "";
+    document.getElementById("quota-input-field").value = "";
   });
 
 // History button
