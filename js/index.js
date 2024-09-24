@@ -33,6 +33,13 @@ document
     let accountBalanceElement = document.getElementById("account-balance");
     let accountBalanceValue = getInnerTextById("account-balance");
 
+    if (noakhaliInputValue > accountBalanceValue) {
+      alert("Invalid Donation Amount!");
+      document.getElementById("modal").close();
+      document.getElementById("noakhali-input-field").value = "";
+      return;
+    }
+
     noakhaliTotalDonateElement.innerText = (
       noakhaliTotalDonateValue + noakhaliInputValue
     ).toFixed(2);
@@ -73,6 +80,13 @@ document
     let accountBalanceElement = document.getElementById("account-balance");
     let accountBalanceValue = getInnerTextById("account-balance");
 
+    if (feniInputValue > accountBalanceValue) {
+      alert("Invalid Donation Amount!");
+      document.getElementById("modal").close();
+      document.getElementById("feni-input-field").value = "";
+      return;
+    }
+
     feniTotalDonateElement.innerText = (
       feniTotalDonateValue + feniInputValue
     ).toFixed(2);
@@ -112,6 +126,13 @@ document
 
     let accountBalanceElement = document.getElementById("account-balance");
     let accountBalanceValue = getInnerTextById("account-balance");
+
+    if (quotaInputValue > accountBalanceValue) {
+      alert("Invalid Donation Amount!");
+      document.getElementById("modal").close();
+      document.getElementById("quota-input-field").value = "";
+      return;
+    }
 
     quotaTotalDonateElement.innerText = (
       quotaTotalDonateValue + quotaInputValue
